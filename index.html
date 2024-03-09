@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:wght@100..900&family=Josefin+Sans:ital,wght@0,326;1,326&family=League+Spartan:wght@100..900&family=Poppins&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+
+        }
+    </style>
+    <title>Frontend Mentor | News homepage</title>
+</head>
+
+<body class="bg-[#fffdfa] container mx-auto px-4 min-w-[25rem] md:px-0">
+    <nav class="flex justify-between items-center mt-7 md:mt-16">
+        <div class="">
+            <img src="assets/images/logo.svg" alt="">
+        </div>
+        <div class="hidden md:block text-[#5d5f79]">
+            <a class="mx-4" href="">Home</a>
+            <a class="mx-4" href="">New</a>
+            <a class="mx-4" href="">Popular</a>
+            <a class="mx-4" href="">Trending</a>
+            <a class="mx-4" href="">Categories</a>
+        </div>
+        <div id="backgroundOpacity" class="hidden absolute opacity-50 bg-black w-screen h-[340vh] top-0 right-0"></div>
+        <div class="block md:hidden relative ">
+            <button onclick="toggleSidebar()" class=""><img src="assets/images/icon-menu.svg"
+                    alt=""></button>
+            <div id="sidebar"
+                class="fixed hidden top-0 right-0 w-60 h-[335vh] p-4 bg-white transition-transform ">
+                <button onclick="toggleCloseSidebar()" class="ms-40 mt-4"><img src="assets/images/icon-menu-close.svg"
+                        alt=""></button>
+                <a class="block mt-16 py-3 mx-6 font-semibold" href="#">Home</a>
+                <a class="block py-3 mx-6 font-semibold" href="#">New</a>
+                <a class="block py-3 mx-6 font-semibold" href="#">Popular</a>
+                <a class="block py-3 mx-6 font-semibold" href="#">Trending</a>
+                <a class="block py-3 mx-6 font-semibold" href="#">Categories</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="grid md:grid-cols-3 mt-12 gap-7">
+        <div class="md:col-span-2">
+            <img class="hidden md:block" src="assets/images/image-web-3-desktop.jpg" alt="">
+            <img class="block md:hidden w-[23rem]" src="assets/images/image-web-3-mobile.jpg" alt="">
+            <div class="grid md:grid-cols-2 mt-5">
+                <div class="font-black w-80 tracking-widest">
+                    <p class="text-[3.1rem] leading-[1.2]">The Bright Future of Web 3.0?</p>
+                </div>
+                <div class="tracking-wider whitespace-normal mt-2 md:mt-0">
+                    <p class="text-md text-[#5d5f79] w-96">We dive into the next evolution of the web that claims to put
+                        thepower of the platforms back into the hands of the people. But is it really fulfilling its
+                        promise?</p>
+                    <button class="uppercase mt-5 md:mt-10 px-9 py-2 bg-[#f15e50] text-[#fffdfa]">Read more</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-[#00001a] p-7 mt-7 me-4 md:mt-0 md:me-0">
+            <div class="border-b">
+                <p class="text-[#e9ab53] text-5xl font-bold">New</p>
+                <p class="text-[#fffdfa] text-xl font-bold mt-8">Hydrogen VS Electric Cars</p>
+                <p class="text-[#c5c6ce] mt-2 mb-8">Will hydrogen-fueled cars ever catch up to EVs?</p>
+            </div>
+            <div class="border-b">
+                <p class="text-[#fffdfa] text-xl font-bold mt-8"> The Downsides of AI Artistry</p>
+                <p class="text-[#c5c6ce] mt-2 mb-8"> What are the possible adverse effects of on-demand AI image
+                    generation?
+                </p>
+            </div>
+            <div class="">
+                <p class="text-[#fffdfa] text-xl font-bold mt-8">Is VC Funding Drying Up?</p>
+                <p class="text-[#c5c6ce] mt-2">Private funding by VC firms is down 50% YOY. We take a look at what that
+                    means.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="md:flex mt-16 mb-32">
+        <div class="grid grid-cols-2 grid-rows-1 mt-12 md:mt-0 md:flex md:items-start">
+            <div class="row-span-1 w-40 md:row-span-0 w-0">
+                <img class="" src="assets/images/image-retro-pcs.jpg" alt="">
+            </div>
+            <div class="md:ms-8">
+                <div class="text-[#c5c6ce] text-4xl font-bold">
+                    <p>01</p>
+                </div>
+                <div class="">
+                    <p class="mt-4 font-black">Reviving Retro PCs</p>
+                    <p class="text-[##5d5f79] mt-4">What happens when old PCs are given modern upgrades?</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 grid-rows-1 mt-12 md:mt-0 md:flex md:items-start">
+            <div class="row-span-1 w-40 md:row-span-0 w-0">
+                <img class="" src="assets/images/image-top-laptops.jpg" alt="">
+            </div>
+            <div class="md:ms-8">
+                <div class="text-[#c5c6ce] text-4xl font-bold">
+                    <p>02</p>
+                </div>
+                <div class="">
+                    <p class="mt-4 font-black">Top 10 Laptops of 2022</p>
+                    <p class="text-[##5d5f79] mt-4">Our best picks for various needs and budgets.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 grid-rows-1 mt-12 md:mt-0 md:flex md:items-start">
+            <div class="row-span-1 w-40 md:row-span-0 w-0">
+                <img class="" src="assets/images/image-gaming-growth.jpg" alt="">
+            </div>
+            <div class="md:ms-8">
+                <div class="text-[#c5c6ce] text-4xl font-bold">
+                    <p>03</p>
+                </div>
+                <div class="">
+                    <p class="mt-4 font-black">The Growth of Gaming</p>
+                    <p class="text-[##5d5f79] mt-4">How the pandemic has sparked fresh opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+    <script>
+        var sidebar = document.getElementById("sidebar");
+        var backgroundOpacity = document.getElementById("backgroundOpacity");
+
+        function toggleSidebar() {
+            sidebar.classList.remove("hidden");
+            backgroundOpacity.classList.remove("hidden");
+        }
+
+        function toggleCloseSidebar() {
+            sidebar.classList.add("hidden")
+            backgroundOpacity.classList.add("hidden")
+        }
+    </script>
+</body>
+
+</html>
